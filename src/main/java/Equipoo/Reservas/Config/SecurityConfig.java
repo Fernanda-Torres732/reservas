@@ -32,7 +32,7 @@ public class SecurityConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://localhost:4000")); // puerto del frontend
+        config.setAllowedOrigins(List.of("http://localhost:4000", "https://frontend-production-bc2f.up.railway.app")); // puerto del frontend
         config.setAllowedHeaders(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
@@ -41,3 +41,4 @@ public class SecurityConfig {
         return new CorsFilter(source);
     }
 }
+
