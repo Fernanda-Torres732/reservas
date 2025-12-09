@@ -6,7 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@FeignClient(name = "restaurante", path = "/api/cliente")
+@FeignClient(name = "restaurante", url = "https://soothing-expression-production-62f7.up.railway.app", path = "/api/cliente")
 public interface ClienteClient {
 
     @GetMapping
@@ -54,3 +54,4 @@ public interface ClienteClient {
         public String getTelefonoCliente(){return telefonoCliente;} public void setTelefonoCliente(String t){this.telefonoCliente=t;}
     }
 }
+
